@@ -33,7 +33,7 @@ def main(request):
     processingtime = str(datetime.now())  # declare processing time
 
     # calculate embedded docs
-    station_doc = str_to_dict(input_str, processingtime)
+    station_doc = str_map_emb(input_str, processingtime)
 
     publish(station_doc)
 
