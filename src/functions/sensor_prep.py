@@ -20,6 +20,18 @@ def str_map_emb(input_str, timestr):
 
     convertedDict = str_to_dict(input_str)
 
+    if "soilmoisture1" not in convertedDict or "soilatt1" not in convertedDict:
+        convertedDict['soilmoisture1'] = 0
+        convertedDict['soilatt1'] = 0
+
+    if "soilmoisture2" not in convertedDict or "soilatt2" not in convertedDict:
+        convertedDict['soilmoisture2'] = 0
+        convertedDict['soilatt2'] = 0
+
+    if "soilmoisture3" not in convertedDict or "soilatt3" not in convertedDict:
+        convertedDict['soilmoisture3'] = 0
+        convertedDict['soilatt3'] = 0
+
     sensorDict = {
         'soilmoisture1': float(convertedDict['soilmoisture1']),
         'soilatt1': float(convertedDict['soilatt1']),
